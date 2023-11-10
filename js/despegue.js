@@ -1,107 +1,111 @@
-alert('¡Bienvenido al lanzamiento de la nave espacial!');
+    alert('¡Bienvenido al lanzamiento de la nave espacial!');
 
-alert('¡Iniciemos la cuenta regresiva!');
+    alert('¡Iniciemos la cuenta regresiva!');
 
-// Además, se pone una función básica para que se pueda iniciar la cuenta regresiva siempre que se quiera
+    // Además, se pone una función básica para que se pueda iniciar la cuenta regresiva siempre que se quiera
 
-function lanzamientoCohete () {
+export function lanzamientoCohete() {
 
-    let iniciarCuentaRegresiva = prompt('¿Desea iniciar la cuenta regresiva?');
+    function lanzamientoCohete() {
 
-    if (iniciarCuentaRegresiva === ('si' || 'Sí' || 'SI' || 'sí'|| 'SI' || 'Si')) {
+        let iniciarCuentaRegresiva = prompt('¿Desea iniciar la cuenta regresiva?');
 
-        console.log('¡Iniciando cuenta regresiva!');
+        if (iniciarCuentaRegresiva === ('si' || 'Sí' || 'SI' || 'sí' || 'SI' || 'Si')) {
 
-        // Variables para crear una cuenta regresiva 
+            console.log('¡Iniciando cuenta regresiva!');
 
-        let cuentaRegresiva = 10;
+            // Variables para crear una cuenta regresiva 
 
-        while (cuentaRegresiva > 0) {
+            let cuentaRegresiva = 10;
 
-            console.log('Despegue en: ' + cuentaRegresiva);
+            while (cuentaRegresiva > 0) {
 
-            cuentaRegresiva--;
+                console.log('Despegue en: ' + cuentaRegresiva);
 
-            if (cuentaRegresiva === 5) {
+                cuentaRegresiva--;
 
-                console.log('¡Alerta de despegue!');
+                if (cuentaRegresiva === 5) {
 
-            }
-            if (cuentaRegresiva === 0) {
+                    console.log('¡Alerta de despegue!');
 
-                console.log('¡Despegue!');
+                }
+                if (cuentaRegresiva === 0) {
 
-                break;
-            }
+                    console.log('¡Despegue!');
 
-        }
-
-        // Una vez hay despegue entonces nuestro cohete se mueve hacia arriba
-
-        let cohete = 100;
-
-        while (cohete > 0) {
-
-            console.log('Cohete cerca del punto inicial [ ' + cohete + ' ]');
-
-            cohete--;
-
-            if (cohete === 75) {
-
-                console.log('¡Cohete en movimiento!');
+                    break;
+                }
 
             }
 
-            if (cohete === 60) {
+            // Una vez hay despegue entonces nuestro cohete se mueve hacia arriba
 
-                console.log('¡Cohete con turbulencias!');
+            let cohete = 100;
+
+            while (cohete > 0) {
+
+                console.log('Cohete cerca del punto inicial [ ' + cohete + ' ]');
+
+                cohete--;
+
+                if (cohete === 75) {
+
+                    console.log('¡Cohete en movimiento!');
+
+                }
+
+                if (cohete === 60) {
+
+                    console.log('¡Cohete con turbulencias!');
+
+                }
+
+                if (cohete === 50) {
+
+                    console.log('¡Estamos viendo la tierra redonda 🥵!');
+
+                }
+
+                if (cohete === 25) {
+
+                    console.log('¡Cohete en la estratosfera! 🥶');
+                }
+
+                if (cohete === 0) {
+
+                    console.log('¡Cohete en el espacio!');
+
+                    break;
+
+                }
 
             }
 
-            if (cohete === 50) {
+            // Cuando nuestro cohete llegue al espacio entonces nuestro piloto dirá algo
 
-                console.log('¡Estamos viendo la tierra redonda 🥵!');
-
-            }
-
-            if (cohete === 25) {
-
-                console.log('¡Cohete en la estratosfera! 🥶');
-            }
+            const piloto = 'Diego'
 
             if (cohete === 0) {
 
-                console.log('¡Cohete en el espacio!');
+                console.log('¡Hola ' + piloto + '!' + ' ¡Bienvenido al espacio!');
 
-                break;
+                alert('¡Hola ' + piloto + '!' + ' El viaje ha terminado 😇');
 
+            }
+
+        } else {
+
+            // Si el usuario no inicia la cuenta regresiva entonces no se ejecuta el programa
+
+            if (iniciarCuentaRegresiva !== ('si' || 'Sí' || 'SI' || 'sí' || 'SI' || 'Si')) {
+
+                console.log('¡Hasta luego!');
+
+                alert('Fallaste en iniciar la cuenta regresiva');
             }
 
         }
 
-        // Cuando nuestro cohete llegue al espacio entonces nuestro piloto dirá algo
-
-        const piloto = 'Diego'
-
-        if (cohete === 0) {
-
-            console.log ('¡Hola ' + piloto + '!' + ' ¡Bienvenido al espacio!');
-
-            alert('¡Hola ' + piloto + '!' + ' El viaje ha terminado 😇');
-
-        }
-        
-    } else {
-
-    // Si el usuario no inicia la cuenta regresiva entonces no se ejecuta el programa
-
-        if (iniciarCuentaRegresiva !== ('si' || 'Sí' || 'SI' || 'sí'|| 'SI' || 'Si')) {
-
-            console.log('¡Hasta luego!');
-
-            alert('Fallaste en iniciar la cuenta regresiva');
-        }
-        
     }
 
 }
