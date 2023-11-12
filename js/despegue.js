@@ -10,7 +10,7 @@ export function lanzamientoCohete() {
 
         let iniciarCuentaRegresiva = prompt('¿Desea iniciar la cuenta regresiva?');
 
-        if (iniciarCuentaRegresiva === ('si' || 'Sí' || 'SI' || 'sí' || 'SI' || 'Si')) {
+        if (iniciarCuentaRegresiva === 'si' || iniciarCuentaRegresiva === 'Sí' || iniciarCuentaRegresiva ===  'SI' || iniciarCuentaRegresiva === 'sí' || iniciarCuentaRegresiva === 'SI' || iniciarCuentaRegresiva === 'Si') {
 
             console.log('¡Iniciando cuenta regresiva!');
 
@@ -93,19 +93,25 @@ export function lanzamientoCohete() {
 
             }
 
+            return true;
+
         } else {
 
             // Si el usuario no inicia la cuenta regresiva entonces no se ejecuta el programa
 
-            if (iniciarCuentaRegresiva !== ('si' || 'Sí' || 'SI' || 'sí' || 'SI' || 'Si')) {
+            if (iniciarCuentaRegresiva !== 'si' && iniciarCuentaRegresiva !== 'Sí' && iniciarCuentaRegresiva !== 'SI' && iniciarCuentaRegresiva !== 'sí' && iniciarCuentaRegresiva !== 'SI' && iniciarCuentaRegresiva !== 'Si') {
 
                 console.log('¡Hasta luego!');
 
                 alert('Fallaste en iniciar la cuenta regresiva');
             }
 
+            return false;
+
         }
 
     }
 
 }
+
+debugger;
