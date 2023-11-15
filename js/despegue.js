@@ -4,8 +4,6 @@
 
     // Además, se pone una función básica para que se pueda iniciar la cuenta regresiva siempre que se quiera
 
-export function lanzamientoCohete() {
-
     function lanzamientoCohete() {
 
         let iniciarCuentaRegresiva = prompt('¿Desea iniciar la cuenta regresiva?');
@@ -111,7 +109,3 @@ export function lanzamientoCohete() {
         }
 
     }
-
-}
-
-debugger;
